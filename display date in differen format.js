@@ -4,7 +4,6 @@ let date = today.getDate();
 let month = today.getMonth();
 let year = today.getFullYear();
 
-date < 10 ? "0" + date : date;
 if (date < 10) {
   date = `0${date}`;
 }
