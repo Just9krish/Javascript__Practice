@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Print window content with button</title>
+</head>
+<body>
+    <h1>Want to pint me with just one click</h1>
+    <p>just click on the 'Click here' button</p>
+    <button onclick="toPrintPage()">click here</button>
+
+    <script>
+        function toPrintPage () {
+            window.print();
+        }
+    </script>
+</body>
+</html>
