@@ -17,7 +17,18 @@ let hour = toDay.getHours();
 let minute = toDay.getMinutes();
 let second = toDay.getSeconds();
 let prepand = hour >= 12 ? "PM" : "AM";
+
 hour = hour >= 12 ? hour - 12 : hour;
+if (hour < 10) {
+  hour = "0" + hour;
+}
+
+if (minute < 10) {
+  minute = "0" + minute;
+}
+if (second < 10) {
+  second = "0" + second;
+}
 
 if (hour === 0 && prepand === "PM") {
   if (minute === 0 && second === 0) {
