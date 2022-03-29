@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a variable from user defined</title>
+  </head>
+  <body>
+    <input type="text" id="varname" placeholder="Your variable name" />
+    <button onclick="getName()">Take this as a variable name</button> <br>
+    <p>Result : <span id="result"></span></p>
+
+    <script type="text/javascript">
+      function getName() {
+        var varName = "";
+        var x = document.getElementById("varname").value;
+        this[varName] = x;
+        alert("The variable " + this[varName] + " was created.");
+        document.getElementById('result').innerHTML = this[varName];
+      }
+    </script>
+  </body>
+</html>
