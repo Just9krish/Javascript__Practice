@@ -1,0 +1,51 @@
+<script>
+  let animal = {
+    eats: true,
+  };
+
+  // let rabbit = Object.create(animal)
+
+  // console.log(rabbit.eats)
+  // console.log(Object.getPrototypeOf(rabbit) === animal)
+  // console.log(Object.setPrototypeOf(rabbit, {}))
+
+  let rabbit = Object.create(animal, {
+    jumps: {
+      value: true,
+    },
+  });
+
+  console.log(rabbit.jumps);
+
+  // we can copy exact object with enumarable and non-enumerable property and getter and setter
+  // it is moer powerfull than copy property with for in loop
+
+  // let exactClone = Object.create(
+  //     Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj)
+  // )
+
+  //   let obj = {};
+
+  //   let key = prompt("What's the key?", "__proto__");
+  //   obj[key] = 'sjfdlf';
+
+  //   alert(obj[key]);   // [object Object] even set key value cuz __proto__ only take object and null
+
+  // let's solve above problem just switching to map insted of plain object
+
+  // let map = new Map()
+
+  // let key = prompt("What's the key?", "__proto__");
+  // map.set(key, 'some value');
+
+  // alert(map.get(key))    // some value (as intended)
+
+  // another method
+
+  let obj = Object.create(null);   // created object with prototype null so does't get setter and getter for __proto__
+
+  let key = prompt("What's the key?", "__proto__");
+  obj[key] = "some value";
+
+  alert(obj[key]);
+</script>
